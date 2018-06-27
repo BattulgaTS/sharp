@@ -52,7 +52,7 @@
     "Tom Lokhorst <tom@lokhorst.eu>"
   ],
   "scripts": {
-    "install": "(node install/libvips && node install/dll-copy && prebuild-install) || (node-gyp rebuild && node install/dll-copy)",
+    "install": "(node install/libvips && node install/dll-copy && prebuild-install) || (nw-gyp rebuild && node install/dll-copy)",
     "clean": "rm -rf node_modules/ build/ vendor/ coverage/ test/fixtures/output.*",
     "test": "semistandard && cc && nyc --reporter=lcov --branches=99 mocha --slow=5000 --timeout=60000 ./test/unit/*.js && prebuild-ci",
     "coverage": "./test/coverage/report.sh",
